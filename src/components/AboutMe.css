@@ -1,0 +1,112 @@
+.about-me {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.about-content h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-text {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.about-text p:first-child {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.social-links {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-links h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-link.github {
+  background: linear-gradient(135deg, #24292e 0%, #586069 100%);
+}
+
+.social-link.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+}
+
+.social-link.email {
+  background: linear-gradient(135deg, #ea4335 0%, #fbbc04 100%);
+}
+
+.social-link.goodreads {
+  background: linear-gradient(135deg, #f4f1ea 0%, #d4c4a7 100%);
+  color: #372213;
+}
+
+.social-link.resume {
+  background: linear-gradient(135deg, #34a853 0%, #4285f4 100%);
+}
+
+.social-link i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .about-content h2 {
+    font-size: 2rem;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-me {
+    padding: 1rem 0;
+  }
+} 
