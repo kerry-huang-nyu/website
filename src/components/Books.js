@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Books.css';
 
 function Books() {
+  const [hoverText, setHoverText] = useState('');
+  const [isTextVisible, setIsTextVisible] = useState(false);
+
+  const handleClick = () => {
+    setIsTextVisible(!isTextVisible);
+    setHoverText(isTextVisible ? '' : 'That being said, I probably also wouldn\'t disagree with all of the ideas contained in C++ Programming for Linux Systems');
+  };
+
   // Helper function to render text with line breaks and links
   const renderDescription = (description) => {
     // Split by line breaks
@@ -36,6 +44,13 @@ function Books() {
     });
   };
 
+  // Helper function to extract URL from description
+  const extractUrl = (description) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const matches = description.match(urlRegex);
+    return matches ? matches[0] : null;
+  };
+
   // User's actual books organized by category
   const fictionBooks = [
     {
@@ -67,7 +82,7 @@ function Books() {
       title: "The Picture of Dorian Gray",
       author: "Oscar Wilde",
       status: "Completed",
-      description: "I can resist anything except temptation",
+      description: "I can resist anything except temptation.",
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1454087681i/489732.jpg"
     },
     {
@@ -121,7 +136,7 @@ function Books() {
       title: "But How Do It Know?",
       author: "J. Clark Scott",
       status: "Currently Reading",
-      description: "NAND gates are universal.",
+      description: "The universe is a NAND gate.",
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1375433017i/18276352.jpg"
     },
     {
@@ -159,11 +174,20 @@ function Books() {
     {
       id: 14,
       title: "5G NR, Wi-Fi 6, and Bluetooth LE 5",
+      author: "Charles Petzold",
+      status: "Planning to Read",
+      description: "Understand how computers work at a concrete level.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1709792682i/44882.jpg"
+    },
+    {
+      id: 15,
+      title: "Code: The Hidden Language of Computer Hardware and Software",
       author: "Douglas H. Morais",
       status: "Planning to Read",
       description: "Understanding the fundamentals of 5G technology.",
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1686596354i/137222389.jpg"
-    }
+    },
+
   ];
 
   const getStatusColor = (status) => {
@@ -184,17 +208,27 @@ function Books() {
     e.target.src = "https://via.placeholder.com/200x300/95A5A6/FFFFFF?text=Book+Cover";
   };
 
-  const BookCard = ({ book, sectionClass }) => {
-    const status = book.status;
+  const BookCard = ({ book }) => {
+    const url = extractUrl(book.description);
+    
+    const handleClick = () => {
+      if (url) {
+        window.open(url, '_blank', 'noopener noreferrer');
+      }
+    };
+
     return (
-      <div className={`book-card ${sectionClass}`}>
+      <div 
+        className={`book-card ${url ? 'clickable' : ''}`}
+        onClick={handleClick}
+      >
         <div className="book-cover">
           {/* Orange marker for currently reading */}
-          {status === 'Currently Reading' && (
+          {book.status === 'Currently Reading' && (
             <div className="currently-reading-marker">Currently Reading</div>
           )}
           {/* Translucent overlay for planning to read */}
-          {status === 'Planning to Read' && (
+          {book.status === 'Planning to Read' && (
             <div className="planning-overlay" />
           )}
           <img 
@@ -207,7 +241,7 @@ function Books() {
               <h4 className="book-title">{book.title}</h4>
               <p className="book-author">by {book.author}</p>
               <p className="book-description">
-                {renderDescription(book.description)}
+                {book.description}
               </p>
               <span className={`book-status ${getStatusColor(book.status)}`}>
                 {book.status}
@@ -224,7 +258,7 @@ function Books() {
       <h3>{title}</h3>
       <div className="books-grid">
         {books.map(book => (
-          <BookCard key={book.id} book={book} sectionClass={sectionClass} />
+          <BookCard key={book.id} book={book} />
         ))}
       </div>
     </section>
@@ -233,14 +267,19 @@ function Books() {
   return (
     <div className="books">
       <div className="books-content">
-        <h2>Books</h2>
-        <p className="books-intro"> 
+        <p 
+          className="books-intro" 
+          onClick={handleClick}
+        > 
           The fact that I find these books to be the most important does not indicate
           that I agree with all, or even any ideas expressed in them. 
+          <div className={`hover-text ${isTextVisible ? 'visible' : ''}`}>
+            That being said, I probably also wouldn't disagree with ALL of the ideas contained in my textbooks.
+          </div>
         </p>
 
         <BookSection 
-          title="Books Related to My Major" 
+          title="CS Books" 
           books={jobSpecificBooks} 
           sectionClass="job-specific-section"
         />

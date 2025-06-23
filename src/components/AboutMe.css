@@ -1,112 +1,186 @@
 .about-me {
-  max-width: 800px;
+  padding: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
 }
 
-.about-content h2 {
-  color: #2c3e50;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.about-text {
-  background: white;
+.about-content {
+  background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  color: #555;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2c3e50;
 }
 
-.about-text p:first-child {
+/* Quote Section */
+.quote-section {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  position: relative;
+}
+
+.quote-section blockquote {
+  font-size: 2.2rem;
   font-style: italic;
-  font-size: 1.2rem;
-  color: #667eea;
-  font-weight: 500;
-}
-
-.social-links {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.social-links h3 {
   color: #2c3e50;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 300;
+  position: relative;
+}
+
+.quote-section blockquote::before,
+.quote-section blockquote::after {
+  content: '"';
+  font-size: 4rem;
+  color: #3498db;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.quote-section blockquote::before {
+  left: -2rem;
+  top: -1rem;
+}
+
+.quote-section blockquote::after {
+  right: -2rem;
+  bottom: -2rem;
+}
+
+/* Social Links Section */
+.social-links-section {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .links-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 1rem;
 }
 
 .social-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   color: white;
   font-weight: 500;
+  width: 90%;
   transition: all 0.3s ease;
-  text-align: center;
   justify-content: center;
-}
-
-.social-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.social-link.github {
-  background: linear-gradient(135deg, #24292e 0%, #586069 100%);
-}
-
-.social-link.linkedin {
-  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
-}
-
-.social-link.email {
-  background: linear-gradient(135deg, #ea4335 0%, #fbbc04 100%);
-}
-
-.social-link.goodreads {
-  background: linear-gradient(135deg, #f4f1ea 0%, #d4c4a7 100%);
-  color: #372213;
-}
-
-.social-link.resume {
-  background: linear-gradient(135deg, #34a853 0%, #4285f4 100%);
+  font-size: 1.1rem;
+  border: none;
 }
 
 .social-link i {
-  font-size: 1.2rem;
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.social-link span {
+  white-space: nowrap;
+}
+
+/* Brand-specific colors */
+.github {
+  background-color: #24292e;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.email {
+  background-color: #ea4335;
+}
+
+.goodreads {
+  background-color: #553b08;
+}
+
+.resume {
+  background-color: #2ecc71;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(110%);
+}
+
+/* About Section */
+.about-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.about-text {
+  line-height: 1.8;
+  font-size: 1.3rem;
+  color: #34495e;
+  margin: 0;
+}
+
+/* Image Section */
+.image-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
 }
 
 @media (max-width: 768px) {
-  .about-content h2 {
-    font-size: 2rem;
+  .about-me {
+    padding: 1rem;
   }
-  
+
+  .quote-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .quote-section blockquote {
+    font-size: 1.8rem;
+  }
+
+  .quote-section blockquote::before,
+  .quote-section blockquote::after {
+    font-size: 3rem;
+  }
+
   .links-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  
-  .about-me {
-    padding: 1rem 0;
+
+  .social-link {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
   }
 } 

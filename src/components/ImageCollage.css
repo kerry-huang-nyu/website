@@ -1,0 +1,38 @@
+.image-collage {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+.collage-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.collage-image-container:hover {
+  transform: scale(1.05) !important;
+  z-index: 2 !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}

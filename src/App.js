@@ -8,6 +8,17 @@ import Projects from './components/Projects';
 function App() {
   const [currentPage, setCurrentPage] = useState('about');
 
+  const handleConnect = () => {
+    setCurrentPage('about');
+    // Wait for the page to render before scrolling
+    setTimeout(() => {
+      const connectSection = document.querySelector('.social-links-section');
+      if (connectSection) {
+        connectSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   const renderPage = () => {
     switch (currentPage) {
       case 'about':
@@ -60,6 +71,14 @@ function App() {
               onClick={() => setCurrentPage('projects')}
             >
               Projects
+            </button>
+          </li>
+          <li>
+            <button 
+              className="nav-link"
+              onClick={handleConnect}
+            >
+              Connect
             </button>
           </li>
         </ul>

@@ -5,40 +5,43 @@ function Projects() {
   const csProjects = [
     {
       id: 1,
+      name: "SBFE Research Project",
+      description: "Investigated the representation problem in the context of Stochastic Boolean Function Evaluations. Proved that the representation problem has a linear approximation algorithm.",
+      githubUrl: "https://github.com/kerry-huang-nyu/Reserach",
+      technologies: ["Algorithms", "Python", "C++", "Jupyter Notebook", "LaTeX", "Research"],
+      category: "Academic",
+      mediaDir: "/project-images/research",
+      mediaFiles: ["Conservative_and_adaptive_RR.jpg", "Strategy_visualization.jpg"]
+    },
+    {
+      id: 2,
       name: "Applied ML",
       description: "Collection of applied machine learning projects and experiments.",
       githubUrl: "https://github.com/kerry-huang-nyu/Applied-ML",
       technologies: ["Python", "Jupyter Notebook", "Machine Learning"],
       category: "Academic",
-      mediaDir: ""
-    },
-    {
-      id: 2,
-      name: "Game Programming",
-      description: "Game development projects using C++.",
-      githubUrl: "https://github.com/kerry-huang-nyu/Intro-to-Game-Programming",
-      technologies: ["C++", "Game Development"],
-      category: "Academic",
-      mediaDir: ""
+      mediaDir: "/project-images/applied-ml",
+      mediaFiles: ["kmeans.png", "pca.png", "separate.png", "tree.png"]
     },
     {
       id: 3,
       name: "Algorithms",
-      description: "Self-made labs to understand concepts presented in Design and Analysis of Algorithms.",
+      description: "Self-made labs to understand concepts presented in Design and Analysis of Algorithms. Concepts include radix sort, red-black trees, graph algorithms, and more.",
       githubUrl: "https://github.com/kerry-huang-nyu/algos",
       technologies: ["C++", "Algorithms", "Data Structures"],
       category: "Academic",
-      mediaDir: ""
+      mediaDir: "/project-images/algos",
+      mediaFiles: ["radix.jpg", "redblack.jpg"]
     },
     {
       id: 4,
       name: "Chess Robot",
-      description: "Creating a chess-playing robot suitable for mobility impaired players. SLDP project.",
+      description: "Creating a chess playing robot suitable for mobility impaired users. My focus is on the daemon, the board reset algorithm, and the robot software. This SLDP project won Tandon's Gunter Georgi award.",
       githubUrl: "https://github.com/kerry-huang-nyu/chessRobot",
       technologies: ["Python", "Robotics", "Chess"],
       category: "Academic",
       mediaDir: "/project-images/chess-robot",
-      mediaFiles: ["robot.jpg"]
+      mediaFiles: ["IMG_2969.JPG", "knightmove.mp4", "IMG_0018.jpg", "pawnmove.mp4"]
     },
     {
       id: 5,
@@ -47,22 +50,32 @@ function Projects() {
       githubUrl: "https://github.com/kerry-huang-nyu/Wordle_Pangram",
       technologies: ["Java", "Algorithms"],
       category: "Academic",
+      mediaDir: "/project-images/wordle",
+      mediaFiles: ["pangram.png"] 
+    },
+    {
+      id: 6,
+      name: "Game Programming",
+      description: "Game development projects using C++.",
+      githubUrl: "https://github.com/kerry-huang-nyu/Intro-to-Game-Programming",
+      technologies: ["C++", "Game Development"],
+      category: "Academic",
       mediaDir: ""
-    }
+    },
   ];
 
   const personalProjects = [
     {
-      id: 6,
-      name: "Sports Corset",
-      description: "Believe it or not, women used to wear corsets for sports. This is a victorian period inspired courset.",
+      id: 7,
+      name: "Victorian Sports Corset",
+      description: "Believe it or not, women used to wear corsets for sports.",
       technologies: ["Fashion Design", "Athletic Wear"],
       category: "Personal",
       mediaDir: "/project-images/sports-corset",
       mediaFiles: ["IMG_3903.JPG", "IMG_3892.mp4", "cachedVideo.mp4"]
     },
     {
-      id: 7,
+      id: 8,
       name: "Pretty Housemaid Corset",
       description: "1890 Symington collection corset. I can't be bothered with coutil (period specific fabric) so I used an 5$ thrifted pair of jeans.",
       technologies: ["Fashion Design", "Historical Recreation"],
@@ -71,7 +84,7 @@ function Projects() {
       mediaFiles: ["IMG_3273.JPG", "IMG_3274.JPG", "ea1650c33032438ca1b3a275bd3aaf50.MP4", "IMG_2616.jpg"]
     },
     {
-      id: 8,
+      id: 9,
       name: "Trench Coat",
       description: "First major sewing project. She has a detachable yoke!!",
       technologies: ["Fashion Design", "Outerwear"],
@@ -80,9 +93,9 @@ function Projects() {
       mediaFiles: ["IMG_1943.JPG", "BBA8C825-2126-43A2-8012-9D7856268CE5.mp4", "E975379D-0475-44FC-9D45-0F999E0C02AF.JPG"]
     },
     {
-      id: 9,
+      id: 10,
       name: "Sketchbook",
-      description: "Collection of fashion sketches and design concepts. Mostly historical fashion with a modern twist.",
+      description: "Collection of fashion sketches and design concepts. So far it's just pretty girlies.",
       technologies: ["Sketching", "Illustration"],
       category: "Personal",
       mediaDir: "/project-images/sketchbook",
@@ -97,7 +110,8 @@ function Projects() {
 
   // Function to check if file is an image
   const isImage = (filename) => {
-    return getFileExtension(filename) === 'jpg';
+    const ext = getFileExtension(filename);
+    return ext === 'jpg' || ext === 'jpeg' || ext === 'png';
   };
 
   // Function to check if file is a video
@@ -135,6 +149,7 @@ function Projects() {
             className="project-media image"
             src={`${project.mediaDir}/${file}`}
             alt={`${project.name} media`}
+            loading="lazy"
           />
         </div>
       );
@@ -151,16 +166,20 @@ function Projects() {
         const validFiles = [];
         project.mediaFiles.forEach(file => {
           if (isImage(file)) {
+            console.log(`thisis an image${project.mediaDir}/${file}`);
+            
             const img = new Image();
             img.src = `${project.mediaDir}/${file}`;
             img.onload = () => {
-              validFiles.push(file);
-              setMediaFiles([...validFiles]);
+              if (!validFiles.includes(file)) {  // Prevent duplicates
+                validFiles.push(file);
+                setMediaFiles([...validFiles]);
+              }
             };
           } else if (isVideo(file)) {
             fetch(`${project.mediaDir}/${file}`)
               .then(response => {
-                if (response.ok) {
+                if (response.ok && !validFiles.includes(file)) {  // Prevent duplicates
                   validFiles.push(file);
                   setMediaFiles([...validFiles]);
                 }
@@ -181,9 +200,9 @@ function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               className="github-link"
+              title="View on GitHub"
             >
               <i className="fab fa-github"></i>
-              View on GitHub
             </a>
           )}
         </div>
@@ -203,7 +222,9 @@ function Projects() {
         
         <div className="project-technologies">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="technology-tag" data-tech={tech}>{tech}</span>
+            <span key={index} className="technology-tag">
+              {tech}
+            </span>
           ))}
         </div>
       </div>
