@@ -191,41 +191,28 @@ function Projects() {
     }, [project.mediaDir, project.mediaFiles]);
 
     return (
-      <div className="project-card">
+      <div 
+        className="project-card" 
+        onClick={() => project.githubUrl && window.open(project.githubUrl, '_blank')}
+        style={{ cursor: project.githubUrl ? 'pointer' : 'default' }}
+      >
         <div className="project-header">
           <h3 className="project-title">{project.name}</h3>
-          {project.githubUrl && (
-            <a 
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-              title="View on GitHub"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-          )}
         </div>
-        <p className="project-description">{project.description}</p>
-        
-        {project.mediaDir && mediaFiles.length > 0 && (
+        {mediaFiles.length > 0 && (
           <div className="project-media-grid">
             {mediaFiles.map((file, index) => (
-              <MediaItem 
-                key={index}
-                file={file}
-                project={project}
-              />
+              <MediaItem key={index} file={file} project={project} />
             ))}
           </div>
         )}
-        
-        <div className="project-technologies">
-          {project.technologies.map((tech, index) => (
-            <span key={index} className="technology-tag">
-              {tech}
-            </span>
-          ))}
+        <div className="project-description">
+          <p>{project.description}</p>
+          <div className="project-tech">
+            {project.technologies.map((tech, index) => (
+              <span key={index} className="tech-tag">{tech}</span>
+            ))}
+          </div>
         </div>
       </div>
     );

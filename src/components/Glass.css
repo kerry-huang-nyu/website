@@ -1,164 +1,214 @@
-.glass {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 0;
+:root {
+  /* Adding darker card colors */
+  --card-background: #121E2B;
+  --card-hover: #1A2B3C;
+  --text-bright: #FFFFFF;
 }
 
-.glass-content h2 {
-  color: #2c3e50;
+.glass {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* GLASS Project Section */
+.glass-project {
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 3rem;
+  border: 1px solid var(--border-color);
+}
+
+.glass h2 {
+  color: var(--text-bright);
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Travel Photos Section */
-.travel-section {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+.glass h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary);
+  margin: 1rem auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(78, 205, 196, 0.2);
 }
 
-.travel-section h3 {
-  color: #2c3e50;
+.glass h3 {
+  color: var(--text-bright);
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0 1rem;
   text-align: center;
 }
 
-.photo-gallery {
+.about-glass,
+.mission-statement,
+.areas-excellence,
+.sustainability-goals {
+  margin-bottom: 2.5rem;
+}
+
+.about-glass p,
+.mission-content,
+.area-card,
+.goal-card {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+}
+
+.about-glass p:hover,
+.mission-content:hover,
+.area-card:hover,
+.goal-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+  background: var(--card-hover);
+}
+
+/* Experience Components Section */
+.experience-components {
+  margin-top: 4rem;
+}
+
+.experience-section {
+  margin-bottom: 3rem;
+}
+
+.experience-section h3 {
+  color: var(--text-bright);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.experience-section h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 1rem auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(255, 217, 61, 0.2);
+}
+
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.photo-item {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.photo-item:hover {
-  transform: translateY(-5px);
-}
-
-.photo-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.photo-caption {
+  gap: 2rem;
   padding: 1rem;
-  background: #f8f9fa;
-  margin: 0;
-  text-align: center;
-  font-weight: 500;
-  color: #555;
 }
 
-/* Components Section */
-.components-section {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-.components-section h3 {
-  color: #2c3e50;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.components-list {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.component-item {
-  padding: 1.5rem;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
+.experience-card {
+  background: var(--card-background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
-.component-item:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.1);
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+  border-color: var(--primary);
+  background: var(--card-hover);
 }
 
-.component-item h4 {
-  color: #2c3e50;
+.card-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0;
+  background: var(--card-background);
+}
+
+.card-images img {
+  border-radius: 8px 8px 0 0;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  filter: brightness(0.85);
+}
+
+.experience-card:hover .card-images img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.card-content {
+  padding: 1.5rem;
+  background: var(--card-background);
+}
+
+.experience-card:hover .card-content {
+  background: var(--card-hover);
+}
+
+.card-content h4 {
+  color: var(--text-bright);
   font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.component-item p {
-  color: #666;
+.card-content p {
+  color: var(--text-light);
   line-height: 1.6;
   margin: 0;
 }
 
-/* Thesis Section */
-.thesis-section {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.thesis-section h3 {
-  color: #2c3e50;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.thesis-button {
-  display: inline-flex;
-  align-items: center;
+/* Multiple images in a card */
+.card-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 0.5rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  padding: 0.5rem 0.5rem 0;
+  background: white;
 }
 
-.thesis-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+.card-images img {
+  border-radius: 8px 8px 0 0;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.thesis-button i {
-  font-size: 1.2rem;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .glass-content h2 {
+  .glass {
+    padding: 1rem;
+  }
+
+  .glass h2 {
     font-size: 2rem;
   }
-  
-  .photo-gallery {
+
+  .experience-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .card-grid {
     grid-template-columns: 1fr;
   }
-  
-  .glass {
-    padding: 1rem 0;
-  }
-  
-  .travel-section,
-  .components-section,
-  .thesis-section {
-    padding: 1.5rem;
+
+  .card-images {
+    height: auto;
+    grid-template-columns: 1fr;
   }
 } 

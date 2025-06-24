@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe';
 import Glass from './components/Glass';
 import Books from './components/Books';
 import Projects from './components/Projects';
+import logo from './logo.png'; // Import the logo
 
 function App() {
   const [currentPage, setCurrentPage] = useState('about');
@@ -37,7 +38,8 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <div className="nav-brand">
+        <div className="nav-brand" onClick={() => setCurrentPage('about')} style={{ cursor: 'pointer' }}>
+          <img src={logo} alt="Kerry Huang" className="nav-logo" />
           <h1>Kerry Huang</h1>
         </div>
         <ul className="nav-links">

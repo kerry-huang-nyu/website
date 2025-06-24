@@ -121,7 +121,7 @@ function Books() {
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1407813980i/22749723.jpg"
     },
     {
-      id: 15,
+      id: 9,
       title: "So Good They Can't Ignore You",
       author: "Cal Newport",
       status: "Completed",
@@ -132,7 +132,7 @@ function Books() {
 
   const jobSpecificBooks = [
     {
-      id: 9,
+      id: 10,
       title: "But How Do It Know?",
       author: "J. Clark Scott",
       status: "Currently Reading",
@@ -140,7 +140,7 @@ function Books() {
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1375433017i/18276352.jpg"
     },
     {
-      id: 10,
+      id: 11,
       title: "C++ Programming for Linux Systems",
       author: "Desislav Andreev, Stanimir Lukanov",
       status: "Completed",
@@ -148,7 +148,7 @@ function Books() {
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1696940483i/198293027.jpg"
     },
     {
-      id: 11,
+      id: 12,
       title: "Effective Modern C++",
       author: "Scott Meyers",
       status: "Planning to Read",
@@ -156,7 +156,7 @@ function Books() {
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1416178786i/22800553.jpg"
     },
     {
-      id: 12,
+      id: 13,
       title: "The Annotated Turing",
       author: "Charles Petzold",
       status: "Planning to Read",
@@ -164,7 +164,7 @@ function Books() {
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348963714i/2333956.jpg"
     },
     {
-      id: 13,
+      id: 14,
       title: "Design Patterns",
       author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
       status: "Planning to Read",
@@ -172,16 +172,16 @@ function Books() {
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348027904i/85009.jpg"
     },
     {
-      id: 14,
-      title: "5G NR, Wi-Fi 6, and Bluetooth LE 5",
+      id: 15,
+      title: "Code: The Hidden Language of Computer Hardware and Software",
       author: "Charles Petzold",
       status: "Planning to Read",
       description: "Understand how computers work at a concrete level.",
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1709792682i/44882.jpg"
     },
     {
-      id: 15,
-      title: "Code: The Hidden Language of Computer Hardware and Software",
+      id: 16,
+      title: "5G NR, Wi-Fi 6, and Bluetooth LE 5",
       author: "Douglas H. Morais",
       status: "Planning to Read",
       description: "Understanding the fundamentals of 5G technology.",
