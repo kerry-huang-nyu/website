@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Projects.css';
+import { getPublicPath } from '../utils/pathUtils';
 
 function Projects() {
   const csProjects = [
@@ -137,7 +138,7 @@ function Projects() {
             playsInline
             controls={false}
           >
-            <source src={`${project.mediaDir}/${file}`} type={getVideoMimeType()} />
+            <source src={`${getPublicPath(project.mediaDir)}/${file}`} type={getVideoMimeType()} />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -147,7 +148,7 @@ function Projects() {
         <div className="media-container">
           <img 
             className="project-media image"
-            src={`${project.mediaDir}/${file}`}
+            src={`${getPublicPath(project.mediaDir)}/${file}`}
             alt={`${project.name} media`}
             loading="lazy"
           />
@@ -166,10 +167,8 @@ function Projects() {
         const validFiles = [];
         project.mediaFiles.forEach(file => {
           if (isImage(file)) {
-            console.log(`thisis an image${project.mediaDir}/${file}`);
-            
             const img = new Image();
-            img.src = `${project.mediaDir}/${file}`;
+            img.src = `${getPublicPath(project.mediaDir)}/${file}`;
             img.onload = () => {
               if (!validFiles.includes(file)) {  // Prevent duplicates
                 validFiles.push(file);
@@ -177,7 +176,7 @@ function Projects() {
               }
             };
           } else if (isVideo(file)) {
-            fetch(`${project.mediaDir}/${file}`)
+            fetch(`${getPublicPath(project.mediaDir)}/${file}`)
               .then(response => {
                 if (response.ok && !validFiles.includes(file)) {  // Prevent duplicates
                   validFiles.push(file);

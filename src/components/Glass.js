@@ -1,5 +1,6 @@
 import React from 'react';
 import './Glass.css';
+import { getPublicPath } from '../utils/pathUtils';
 
 function Glass() {
   const glassProjectInfo = {
@@ -134,7 +135,7 @@ function Glass() {
                     {card.images.map((image, imgIndex) => (
                       <img 
                         key={imgIndex} 
-                        src={`${section.imagesDir}/${image}`} 
+                        src={`${getPublicPath(section.imagesDir)}/${image}`} 
                         alt={`${card.title} illustration ${imgIndex + 1}`} 
                       />
                     ))}

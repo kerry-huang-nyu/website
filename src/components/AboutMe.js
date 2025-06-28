@@ -1,17 +1,18 @@
 import React from 'react';
 import './AboutMe.css';
 import ImageCollage from './ImageCollage';
+import { getPublicPath } from '../utils/pathUtils';
 
 function AboutMe() {
   const images = [
-    '/aboutme-images/IMG_0262.jpg',
-    '/aboutme-images/IMG_4408.jpg',
-    '/aboutme-images/IMG_6766.jpg',
-    '/aboutme-images/IMG_8512.jpg',
-    '/aboutme-images/IMG_7680.jpg',
-    '/aboutme-images/IMG_8352.jpg',
-    '/aboutme-images/IMG_5469.jpg',
-    '/aboutme-images/罗兰271.jpg',
+    getPublicPath('/aboutme-images/IMG_0262.jpg'),
+    getPublicPath('/aboutme-images/IMG_4408.jpg'),
+    getPublicPath('/aboutme-images/IMG_6766.jpg'),
+    getPublicPath('/aboutme-images/IMG_8512.jpg'),
+    getPublicPath('/aboutme-images/IMG_7680.jpg'),
+    getPublicPath('/aboutme-images/IMG_8352.jpg'),
+    getPublicPath('/aboutme-images/IMG_5469.jpg'),
+    getPublicPath('/aboutme-images/罗兰271.jpg'),
     // Add more image paths as needed
   ];
 
