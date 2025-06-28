@@ -37,7 +37,7 @@ function AboutMe() {
         <h2>About Me</h2>
 
         <p>
-        Hi everyone! I’m Kerry Huang, a student at NYU. I was born in Chengdu, China and moved to the U.S. when I was eight.
+        Hi everyone! I’m Kerry Huang, a student at NYU. I was born in Chengdu, China and moved to the U.S. When I was eight.
         I was introduced to chess early on as a way to help curb my impulsiveness. 
         There’s a rule in chess called “touch move”-— if you touch a piece, you have to move it. 
         Whether it was that rule or just growing up, I learned to slow down and think before I act. 
@@ -99,7 +99,7 @@ function AboutMe() {
             </a>
             
             <a 
-              href="/resume.pdf" 
+              href="https://drive.google.com/file/d/1BssyOc6_x6BUTSyPEP9iV-DCu5EO-WaE/view?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-link resume"

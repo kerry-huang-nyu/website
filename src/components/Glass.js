@@ -54,12 +54,12 @@ function Glass() {
     },
     academicExcellence: {
       title: "Academic Excellence",
-      imagesDir: "/glass-images/academic",
+      imagesDir: "/glass-images/academics",
       cards: [
         {
           title: "Research with Professor Hellerstein",
-          description: "Working on advanced research projects in computer science and data analysis.",
-          images: ["research-visual.jpg"]
+          description: "Worked on Stochastic Boolean Function Evaluation in computer science theory. We were able to prove a linear approximation algorithm for the representation problem.",
+          images: ["Strategy_visualization.jpg"]
         }
       ]
     },
@@ -92,7 +92,7 @@ function Glass() {
           <p>{glassProjectInfo.about}</p>
         </div>
 
-        <div className="mission-statement">
+        {/* <div className="mission-statement">
           <h3>Mission Statement</h3>
           <div className="mission-content">
             <p>Advancing technology and research in computer science while addressing global challenges and sustainability goals.</p>
@@ -117,7 +117,7 @@ function Glass() {
               <p>{goal.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* Experience Components Section */}

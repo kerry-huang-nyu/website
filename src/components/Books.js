@@ -163,30 +163,30 @@ function Books() {
       description: "A guided tour through Alan Turing's historic 1936 paper.",
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348963714i/2333956.jpg"
     },
-    {
-      id: 14,
-      title: "Design Patterns",
-      author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
-      status: "Planning to Read",
-      description: "Elements of reusable object-oriented software.",
-      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348027904i/85009.jpg"
-    },
-    {
-      id: 15,
-      title: "Code: The Hidden Language of Computer Hardware and Software",
-      author: "Charles Petzold",
-      status: "Planning to Read",
-      description: "Understand how computers work at a concrete level.",
-      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1709792682i/44882.jpg"
-    },
-    {
-      id: 16,
-      title: "5G NR, Wi-Fi 6, and Bluetooth LE 5",
-      author: "Douglas H. Morais",
-      status: "Planning to Read",
-      description: "Understanding the fundamentals of 5G technology.",
-      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1686596354i/137222389.jpg"
-    },
+    // {
+    //   id: 14,
+    //   title: "Design Patterns",
+    //   author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    //   status: "Planning to Read",
+    //   description: "Elements of reusable object-oriented software.",
+    //   image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1348027904i/85009.jpg"
+    // },
+    // {
+    //   id: 15,
+    //   title: "Code: The Hidden Language of Computer Hardware and Software",
+    //   author: "Charles Petzold",
+    //   status: "Planning to Read",
+    //   description: "Understand how computers work at a concrete level.",
+    //   image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1709792682i/44882.jpg"
+    // },
+    // {
+    //   id: 16,
+    //   title: "5G NR, Wi-Fi 6, and Bluetooth LE 5",
+    //   author: "Douglas H. Morais",
+    //   status: "Planning to Read",
+    //   description: "Understanding the fundamentals of 5G technology.",
+    //   image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1686596354i/137222389.jpg"
+    // },
 
   ];
 

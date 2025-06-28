@@ -48,7 +48,7 @@ function App() {
               className={currentPage === 'about' ? 'nav-link active' : 'nav-link'}
               onClick={() => setCurrentPage('about')}
             >
-              About Me
+              About
             </button>
           </li>
           <li>

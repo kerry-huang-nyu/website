@@ -56,9 +56,9 @@ function Projects() {
     {
       id: 6,
       name: "Game Programming",
-      description: "Game development projects using C++.",
+      description: "Game development projects using C++ and openGL.",
       githubUrl: "https://github.com/kerry-huang-nyu/Intro-to-Game-Programming",
-      technologies: ["C++", "Game Development"],
+      technologies: ["C++", "Game Development", "OpenGL"],
       category: "Academic",
       mediaDir: ""
     },
@@ -200,7 +200,7 @@ function Projects() {
           <h3 className="project-title">{project.name}</h3>
         </div>
         {mediaFiles.length > 0 && (
-          <div className="project-media-grid">
+          <div className={`project-media-grid ${mediaFiles.length === 1 ? 'single-image' : ''}`}>
             {mediaFiles.map((file, index) => (
               <MediaItem key={index} file={file} project={project} />
             ))}
