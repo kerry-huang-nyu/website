@@ -212,6 +212,177 @@
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+.about-main-section {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.about-photo-col {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.aboutme-photo {
+  width: 210px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  background: #23283a;
+  border: 3px solid #3a7bd5;
+}
+
+.about-text-col {
+  flex: 1 1 320px;
+  background: #23283a;
+  border-radius: 16px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  color: #f1f1f1;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  min-width: 260px;
+}
+
+.about-tldr {
+  background: #3a7bd5;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.about-section-block {
+  margin-bottom: 1.2rem;
+}
+
+.about-section-block h3 {
+  color: #FFD93D;
+  margin-bottom: 0.3rem;
+  font-size: 1.18rem;
+  font-weight: 600;
+}
+
+.about-section-block p {
+  color: #f1f1f1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-bio-flex {
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+  margin: 2.5rem 0 2.5rem 0;
+}
+
+.aboutme-bio-photo-col {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.about-bio-card {
+  display: flex;
+  align-items: stretch;
+  margin: 2.5rem 0 2.5rem 0;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(60, 180, 120, 0.13) 0%, rgba(58,123,213,0.08) 100%);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  overflow: hidden;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+}
+
+.aboutme-bio-photo {
+  width: 260px;
+  height: 100%;
+  max-height: 600px;
+  aspect-ratio: 13/17;
+  min-width: 160px;
+  max-width: 340px;
+  object-fit: cover;
+  border-radius: 22px 0 0 22px;
+  box-shadow: none;
+  background: #23283a;
+  flex-shrink: 0;
+}
+
+.about-bio-text {
+  flex: 1 1 320px;
+  color: #f1f1f1;
+  font-size: 1.13rem;
+  line-height: 1.7;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.2rem 2rem 2rem 2rem;
+  background: none;
+  border-radius: 0 22px 22px 0;
+}
+
+@media (max-width: 900px) {
+  .about-main-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .about-photo-col {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .about-text-col {
+    padding: 1.2rem 1rem 1rem 1rem;
+  }
+  .about-bio-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0;
+  }
+  .aboutme-bio-photo {
+    width: 180px;
+    height: auto;
+    max-height: 240px;
+    margin: 0 auto 1.2rem auto;
+  }
+  .about-bio-text {
+    font-size: 1rem;
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .about-bio-card {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+  }
+  .aboutme-bio-photo {
+    width: 100%;
+    height: 240px;
+    max-width: 100%;
+    min-width: 0;
+    border-radius: 18px 18px 0 0;
+  }
+  .about-bio-text {
+    font-size: 1rem;
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 0 18px 18px;
+    padding: 1.2rem 1rem 1rem 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-me {
     padding: 1rem;

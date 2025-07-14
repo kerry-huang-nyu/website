@@ -1,0 +1,71 @@
+.resume-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20, 24, 32, 0.92);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-modal-content {
+  background: #23283a;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  padding: 32px 24px 24px 24px;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+}
+.resume-modal-close:hover {
+  color: #ff6b6b;
+}
+
+.resume-iframe {
+  width: 60vw;
+  height: 70vh;
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.resume-download-btn {
+  background: #3a7bd5;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+.resume-download-btn:hover {
+  background: #2851a3;
+}
+
+@media (max-width: 900px) {
+  .resume-iframe {
+    width: 90vw;
+    height: 60vh;
+  }
+} 
