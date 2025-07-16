@@ -30,7 +30,7 @@ function AboutMe() {
         <div className="about-bio-card">
           <div className="aboutme-bio-photo-col">
             <img 
-              src={getPublicPath('/罗兰271.JPG')} 
+              src={getPublicPath('/hopeful.jpg')} 
               alt="Kerry Huang" 
               className="aboutme-bio-photo"
             />
