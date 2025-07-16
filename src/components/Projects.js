@@ -5,6 +5,16 @@ import { getPublicPath } from '../utils/pathUtils';
 function Projects() {
   const csProjects = [
     {
+      id: 0,
+      name: "Qualcomm ML Hackathon",
+      description: "Hackathon project hosted by Qualcomm, deployed on Snapdragon X Elite chips. Built a multimodal AI food journal web app using Retrieval Augmented Generation to analyze and summarize meals based on user images and descriptions.",
+      githubUrl: "https://github.com/ajarteag/qc-sandbox",
+      technologies: ["ML", "RAG", "FAISS", "Numpy", "Pytorch", "Sqlite", "Streamlit"],
+      category: "Academic",
+      mediaDir: "/project-images/qualcomm",
+      mediaFiles: ["computer.mp4", "IMG_9161.jpg", "vector.mp4", "phone.mp4"]
+    },
+    {
       id: 1,
       name: "SBFE Research Project",
       description: "Investigated the representation problem in the context of Stochastic Boolean Function Evaluations. Proved that the representation problem has a linear approximation algorithm.",
@@ -14,12 +24,13 @@ function Projects() {
       mediaDir: "/project-images/research",
       mediaFiles: ["Conservative_and_adaptive_RR.jpg", "Strategy_visualization.jpg"]
     },
+    
     {
       id: 2,
       name: "Applied ML",
       description: "Collection of applied machine learning projects and experiments.",
       githubUrl: "https://github.com/kerry-huang-nyu/Applied-ML",
-      technologies: ["Python", "Jupyter Notebook", "Machine Learning"],
+      technologies: ["Python", "Jupyter Notebook", "ML"],
       category: "Academic",
       mediaDir: "/project-images/applied-ml",
       mediaFiles: ["kmeans.png", "pca.png", "separate.png", "tree.png"]
@@ -61,7 +72,8 @@ function Projects() {
       githubUrl: "https://github.com/kerry-huang-nyu/Intro-to-Game-Programming",
       technologies: ["C++", "Game Development", "OpenGL"],
       category: "Academic",
-      mediaDir: ""
+      mediaDir: "",
+      mediaFiles: []
     },
   ];
 

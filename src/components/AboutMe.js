@@ -16,7 +16,7 @@ function AboutMe() {
     getPublicPath('/aboutme-images/IMG_5469.jpg'),
     getPublicPath('/aboutme-images/IMG_8714.jpg'),
     getPublicPath('/aboutme-images/aboutme.jpg'),
-    getPublicPath('/aboutme-images/罗兰271.jpg'),
+    getPublicPath('/aboutme-images/christmas.jpg'),
     // Add more image paths as needed
   ];
 
@@ -30,7 +30,7 @@ function AboutMe() {
         <div className="about-bio-card">
           <div className="aboutme-bio-photo-col">
             <img 
-              src={getPublicPath('/aboutme.JPG')} 
+              src={getPublicPath('/罗兰271.JPG')} 
               alt="Kerry Huang" 
               className="aboutme-bio-photo"
             />
