@@ -5,6 +5,26 @@ import { getPublicPath } from '../utils/pathUtils';
 function Projects() {
   const csProjects = [
     {
+      id: -2,
+      name: "ML Week1: Blackjack",
+      description: "Optimal blackjack strategy based on RL methods. Used epsilon greedy monte carlo algorithm to train the model based on markov assumptions.",
+      githubUrl: "https://github.com/kerry-huang-nyu/ML-Weekly/tree/main/Week1%3A%20Blackjack",
+      technologies: ["ML", "RL", "Monte Carlo"],
+      category: "Academic",
+      mediaDir: "/project-images/blackjack",
+      mediaFiles: ["No_Usable_Ace.png", "Usable_Ace.png"]
+    },
+    {
+      id: -1,
+      name: "ML Week0: Markov",
+      description: "Markov chain used to predict the next word. While the LLM is intuitive, it also gives some pretty interesting results...",
+      githubUrl: "https://github.com/kerry-huang-nyu/ML-Weekly/tree/main/Week0%3A%20Markov%20%2B%20N-Gram",
+      technologies: ["ML", "numpy"],
+      category: "Academic",
+      mediaDir: "/project-images/markov",
+      mediaFiles: ["Alpha and Omega the beginning.png"]
+    },
+    {
       id: 0,
       name: "Qualcomm ML Hackathon",
       description: "Hackathon project hosted by Qualcomm, deployed on Snapdragon X Elite chips. Built a multimodal AI food journal web app using Retrieval Augmented Generation to analyze and summarize meals based on user images and descriptions.",
