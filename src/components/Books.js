@@ -127,6 +127,14 @@ function Books() {
       status: "Completed",
       description: "https://www.youtube.com/watch?v=W3I3kAg2J7w&t=410s&ab_channel=3Blue1Brown",
       image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1360564614i/13525945.jpg"
+    },
+    {
+      id: 10,
+      title: "Atomic Habits",
+      author: "James Clear",
+      status: "Completed",
+      description: "You do not rise to the level of your goals. You fall to the level of your systems.",
+      image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655988385i/40121378.jpg"
     }
   ];
 

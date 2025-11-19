@@ -28,6 +28,16 @@ function Glass() {
           title: "Study Abroad NYU Abu Dhabi",
           description: "Studying at NYU Abu Dhabi was a significant personal growth experience for me. I was immersed in a new culture and was surprised by the diversity in the UAE. Experiencing Ramadan was especially eye-opening, as I saw how different cultures and religions can peacefully coexist.",
           images: ["IMG_5088.JPG", "IMG_5299.JPG", "IMG_6100.JPG", "IMG_6203.JPG"]
+        }, 
+        {
+          title: "AI Dev Open Source Summit",
+          description: "A convention where tech enthusiasts and industry leaders alike share tools and resources in the advancement of AI. I was able to have conversations with leaders and hear how they incorporate AI into their businesses. ",
+          images: ["IMG_9649.JPG", "IMG_9620.JPG", "IMG_9621.JPG", "IMG_9685.JPG"]
+        },
+        {
+          title: "Study Abroad Vin University",
+          description: "Upcoming...",
+          images: []
         }
       ]
     },
@@ -49,7 +59,7 @@ function Glass() {
         {
           title: "Poly Programming Club",
           description: "I founded the Intro Team at PPC, focusing on teaching competitive programming concepts to beginners. Additionally, I played a key role in organizing ICPC and advocating for the club to gain official recognition as a Tandon Student Organization.",
-          images: ["IMG_7147.JPG", "IMG_7186.JPG", "IMG_9346.JPG"]
+          images: ["IMG_7147.JPG", "IMG_7186.JPG", "IMG_0087.JPG", "IMG_9346.JPG"]
         }
       ]
     },
@@ -69,14 +79,19 @@ function Glass() {
       imagesDir: "/glass-images/professional",
       cards: [
         {
-          title: "Grace Hopper 2023",
+          title: "Grace Hopper 2023-2025",
           description: "Participated in the world's largest gathering of women in computing, networking with peers and securing an internship with Cisco.",
-          images: ["IMG_4639.JPG", "IMG_4657.JPG"]
+          images: ["IMG_4657.JPG", "IMG_3497.jpeg"]
         },
         {
-          title: "Cisco Internship 2023",
+          title: "Cisco Internship 2024",
           description: "During my 12 weeks at Cisco, I built lasting friendships and found mentors who guided me. I worked on developing APIs and improving their performance, and streamlined data management for internal systems.",
           images: ["IMG_5469.JPG", "IMG_6490.JPG"]
+        },
+        {
+          title: "Qualcomm Internship 2025",
+          description: "During my 14 weeks at Qualcomm, I worked on multithreaded C++ server to test subsystem restarts. My team was PDT and we conducted stability testing and automated test cases for a variety of chipsets at Qualcomm.", 
+          images: ["IMG_9389.JPG", "IMG_9471.JPG"]
         }
       ]
     }
