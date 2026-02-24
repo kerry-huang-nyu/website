@@ -17,7 +17,6 @@ function AboutMe() {
     getPublicPath('/aboutme-images/IMG_8714.jpg'),
     getPublicPath('/aboutme-images/aboutme.jpg'),
     getPublicPath('/aboutme-images/christmas.jpg'),
-    // Add more image paths as needed
   ];
 
   return (

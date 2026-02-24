@@ -36,8 +36,8 @@ function Glass() {
         },
         {
           title: "Study Abroad Vin University",
-          description: "Upcoming...",
-          images: []
+          description: "Study abroad at VinUniversity for 2 weeks. Investigated solutions for improving air quality within Hanoi through digital twin technologies. Immersed in Vietnamese culure and visited Ha Long Bay and Hanoi Old Quarter. ",
+          images: ["vietnam_church.jpg", "vietnam_lanterns.jpeg", "vietnam_temple.jpg", "vietnam_vinuni.jpg"]
         }
       ]
     },
@@ -70,7 +70,7 @@ function Glass() {
         {
           title: "Research with Professor Hellerstein",
           description: "Worked on Stochastic Boolean Function Evaluation in computer science theory. We were able to prove a linear approximation algorithm for the representation problem.",
-          images: ["Strategy_visualization.jpg"]
+          images: ["Strategy_visualization.jpg", "graph.jpg"]
         }
       ]
     },
