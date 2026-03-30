@@ -91,7 +91,7 @@ function Glass() {
         {
           title: "Cisco Internship 2024",
           description: "During my 12 weeks at Cisco, I built lasting friendships and found mentors who guided me. I worked on developing APIs and improving their performance, and streamlined data management for internal systems.",
-          images: ["IMG_5469.JPG", "IMG_6490.JPG"]
+          images: ["IMG_5469.jpg", "IMG_6490.JPG"]
         },
         {
           title: "Qualcomm Internship 2025",
