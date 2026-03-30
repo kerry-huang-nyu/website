@@ -27,7 +27,7 @@ function Glass() {
         {
           title: "Study Abroad NYU Abu Dhabi",
           description: "Studying at NYU Abu Dhabi was a significant personal growth experience for me. I was immersed in a new culture and was surprised by the diversity in the UAE. Experiencing Ramadan was especially eye-opening, as I saw how different cultures and religions can peacefully coexist.",
-          images: ["IMG_5088.JPG", "IMG_5299.JPG", "IMG_6100.JPG", "IMG_6203.JPG"]
+          images: ["IMG_5088.JPG", "IMG_5299.JPG", "IMG_6100.jpg", "IMG_6203.JPG"]
         }, 
         {
           title: "AI Dev Open Source Summit",
@@ -59,7 +59,7 @@ function Glass() {
         {
           title: "Poly Programming Club",
           description: "I founded the Intro Team at PPC, focusing on teaching competitive programming concepts to beginners. Additionally, I played a key role in organizing ICPC and advocating for the club to gain official recognition as a Tandon Student Organization.",
-          images: ["IMG_7147.JPG", "IMG_7186.JPG", "IMG_0087.JPG", "IMG_9346.JPG"]
+          images: ["IMG_7147.JPG", "IMG_7186.JPG", "IMG_0087.JPG", "IMG_9346.jpg"]
         }
       ]
     },
@@ -86,7 +86,7 @@ function Glass() {
         {
           title: "Grace Hopper 2023-2025",
           description: "Participated in the world's largest gathering of women in computing, networking with peers and securing an internship with Cisco.",
-          images: ["IMG_4657.JPG", "IMG_3497.jpeg"]
+          images: ["IMG_4657.jpg", "IMG_3497.jpeg"]
         },
         {
           title: "Cisco Internship 2024",
