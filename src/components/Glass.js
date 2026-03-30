@@ -86,7 +86,7 @@ function Glass() {
         {
           title: "Grace Hopper 2023-2025",
           description: "Participated in the world's largest gathering of women in computing, networking with peers and securing an internship with Cisco.",
-          images: ["IMG_4657.jpg", "IMG_3497.jpeg"]
+          images: ["IMG_4657.JPG", "IMG_3497.jpeg"]
         },
         {
           title: "Cisco Internship 2024",
