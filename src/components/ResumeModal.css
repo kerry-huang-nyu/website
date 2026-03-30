@@ -6,44 +6,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 12px; /* prevent modal from touching viewport edges on phones */
 }
 
 .resume-modal-content {
   background: #23283a;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.35);
-  padding: 32px 24px 24px 24px;
+  padding: 28px 20px 18px 20px;
   position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
+  width: min(980px, 96vw);
+  max-height: calc(100vh - 24px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto; /* allow scrolling on small screens */
 }
 
 .resume-modal-close {
   position: absolute;
-  top: 16px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
   background: none;
   border: none;
   color: #fff;
   font-size: 2.2rem;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3; /* keep above iframe */
   transition: color 0.2s;
+  line-height: 1;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35); /* improve tap target against iframe */
 }
 .resume-modal-close:hover {
   color: #ff6b6b;
 }
 
 .resume-iframe {
-  width: 60vw;
-  height: 70vh;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 240px;
+  height: 62vh; /* default; media queries below tighten for phones */
   border: none;
   background: #fff;
   border-radius: 8px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
@@ -57,7 +65,8 @@
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s;
-  margin-top: 8px;
+  margin-top: 2px;
+  width: fit-content;
 }
 .resume-download-btn:hover {
   background: #2851a3;
@@ -65,7 +74,36 @@
 
 @media (max-width: 900px) {
   .resume-iframe {
-    width: 90vw;
-    height: 60vh;
+    height: 58vh;
   }
 } 
+
+@media (max-width: 600px) {
+  .resume-modal-content {
+    padding: 34px 14px 14px 14px; /* room for close button */
+  }
+
+  .resume-modal-close {
+    top: 8px;
+    right: 10px;
+    font-size: 2rem;
+  }
+
+  .resume-iframe {
+    height: 52vh;
+    min-height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .resume-download-btn {
+    width: 100%;
+    text-align: center;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 380px) {
+  .resume-iframe {
+    height: 46vh;
+  }
+}

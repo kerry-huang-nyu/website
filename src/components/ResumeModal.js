@@ -8,7 +8,14 @@ function ResumeModal({ open, onClose }) {
   return (
     <div className="resume-modal-overlay">
       <div className="resume-modal-content">
-        <button className="resume-modal-close" onClick={onClose}>&times;</button>
+        <button
+          type="button"
+          className="resume-modal-close"
+          onClick={onClose}
+          aria-label="Close resume preview"
+        >
+          &times;
+        </button>
         <iframe
           src={resumeUrl}
           title="Resume"

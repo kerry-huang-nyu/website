@@ -47,8 +47,8 @@ function Glass() {
       cards: [
         {
           title: "Creating Data Structure and Algorithm Videos",
-          description: "As a former DSA TA, I created videos covering DSA topics that I found to be particularly confusing to students. Creating DSA videos enhanced my presentation skills and my ability to simplify complex topics.",
-          images: ["bigO.png"]
+          description: "Created videos covering DSA topics that I found to be particularly confusing to students. Creating DSA videos enhanced my presentation skills and my ability to simplify complex topics.",
+          images: ["bigO.png", "dll.png"]
         }
       ]
     },
@@ -71,6 +71,11 @@ function Glass() {
           title: "Research with Professor Hellerstein",
           description: "Worked on Stochastic Boolean Function Evaluation in computer science theory. We were able to prove a linear approximation algorithm for the representation problem.",
           images: ["Strategy_visualization.jpg", "graph.jpg"]
+        },
+        {
+          title: "ChessBot SLDP Project",
+          description: "Built a chess playing robot suitable for mobility impaired users. My focus is on the daemon, the board reset algorithm, and the robot software. This SLDP project won Tandon's Gunter Georgi award.",
+          images: ["bot.JPG", "chess.jpg"]
         }
       ]
     },
@@ -108,32 +113,35 @@ function Glass() {
           <p>{glassProjectInfo.about}</p>
         </div>
 
-        {/* <div className="mission-statement">
-          <h3>Mission Statement</h3>
-          <div className="mission-content">
-            <p>Advancing technology and research in computer science while addressing global challenges and sustainability goals.</p>
+        <div className="glass-external-links">
+          <div className="glass-external-section">
+            <h3>Glass Abstract</h3>
+            <p>View the GLASS abstract.</p>
+            <a
+              className="glass-link-button"
+              href="https://abstract.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Abstract
+            </a>
+          </div>
+
+          <div className="glass-external-section">
+            <h3>Glass Final Paper</h3>
+            <p>View the GLASS final paper.</p>
+            <a
+              className="glass-link-button"
+              href="https://paper.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Final Paper
+            </a>
           </div>
         </div>
 
-        <div className="areas-excellence">
-          <h3>Areas of Excellence</h3>
-          {glassProjectInfo.areasOfExcellence.map((area, index) => (
-            <div key={index} className="area-card">
-              <h4>{area.title}</h4>
-              <p>{area.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="sustainability-goals">
-          <h3>UN Sustainability Development Goals/NAE Grand Challenges</h3>
-          {glassProjectInfo.sustainabilityGoals.map((goal, index) => (
-            <div key={index} className="goal-card">
-              <h4>{goal.title}</h4>
-              <p>{goal.description}</p>
-            </div>
-          ))}
-        </div> */}
+        
       </section>
 
       {/* Experience Components Section */}

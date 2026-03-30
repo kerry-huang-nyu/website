@@ -1,5 +1,6 @@
 High priority:
 * change the image resolution process to have folder links and read the files instead 
+* investigate why github is not rendering the images on a couple of pages 
 
 Low priority: 
 
