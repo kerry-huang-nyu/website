@@ -119,7 +119,7 @@ function Glass() {
             <p>View the GLASS abstract.</p>
             <a
               className="glass-link-button"
-              href="https://abstract.com"
+              href="https://docs.google.com/document/d/1h29XnO0NQN9PMgB5Lq4kKlRiY2jvGQ0IncvlRJev32Y/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -132,7 +132,7 @@ function Glass() {
             <p>View the GLASS final paper.</p>
             <a
               className="glass-link-button"
-              href="https://paper.com"
+              href="https://docs.google.com/document/d/1i36WLEKtiSWrgSD8sv5yNTBFlEhZ8ZuEUCLFUxpYg8o/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

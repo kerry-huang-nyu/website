@@ -1,11 +1,30 @@
 High priority:
-* change the image resolution process to have folder links and read the files instead 
-* investigate why github is not rendering the images on a couple of pages 
+* complete GLASS stuff: more information + also put down all the components 
 
 Low priority: 
-
-* complete GLASS stuff: more information + also put down all the components 
-* change the whitespace format of GLASS 
+* change the cover image to be something else/more flattering 
+* change the linkedin horizontal banner to be something much more personalized 
 * add images + gifs of game programming projects 
-* change + add more images on the website 
-* remove projects that are not flashy enough from the list of projects 
+* add a place where I place media that I deem to be the most important for myself: 
+    - animation creators 
+        jaiden animations 
+        the odd ones out 
+        illymations 
+        swoozie 
+        domics  
+    - math and science: 
+        3b1b 
+        cgp grey -> podcasts/stuff 
+        brady haran -> numberphile 
+        xkcd 
+        veritasium 
+    - funny
+        ysac 
+        sam onella academy 
+        casually explained 
+        iisuperwomanii
+    - art 
+        bernadette banner 
+        micarah tewers 
+        overly sarcastic productions 
+
